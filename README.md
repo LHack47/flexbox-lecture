@@ -155,8 +155,8 @@ Add this code to see it in action:
 
 What will happen if we change flex-direction to column?
 
-## Flexbox alignment and centering with align-items
-Similar to align-content and and align-items, but puts space between multiple lines of flex items. Use this code to get started in our example:
+## Flexbox alignment and centering with align-content
+- Similar to align-content and and align-items, but puts space between multiple lines of flex items. Use this code to get started in our example:
 
 .container {
   display: flex;
@@ -179,3 +179,101 @@ align-content: space-around
 align-content: center;
 
 What happens if you combine justify-content: center in the parent element with align-content: center?
+
+## Flexbox alignment and centering with align-self
+
+- This is a flex property applied to the child to overwrite alignment on the parent container for that specific child.
+
+Try this code:
+
+.container {
+
+  display: flex;
+
+  border: 10px solid goldenrod;
+
+  height: 100vh;
+
+  align-items: flex-start;
+
+}
+
+.box {
+
+  width: 33.3333%;
+
+}
+
+.box2 {
+
+  padding-bottom: 200px;
+
+}
+
+.box6 {
+
+  padding-bottom: 0;
+
+}
+
+.box9 {
+
+  padding-bottom: 50px;
+
+  align-self: flex-end; | stretch | baseline
+
+}
+
+- See how box 9 changes?
+
+## Understanding Flexbox sizing with the flex property.
+
+- Comment out boxs 7 - 10 so there are 6 boxes
+
+- Flexbox intelligently figures out what to do when when there is not enough space or what to do with extra space.
+
+Try this code:
+
+.container {
+
+  display: flex;
+
+}
+
+.box {
+
+  flex: 1;
+
+}
+
+- Notice the change that happens to the children? They each spread out to take up the width of the flex container
+
+
+- Try this code:
+
+
+.box2 {
+
+  flex: 2;
+
+}
+
+.box4 {
+
+  flex: 3;
+
+}
+
+
+- Cool how everything works in ratios right?
+
+
+
+#### Follow up resources
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (good visual representation of what each flex property does)
+
+
+http://flexbox.io/ (free 20 video courses)
+
+http://flexboxfroggy.com/ (fun game to learn flexbox)
